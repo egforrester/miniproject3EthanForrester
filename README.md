@@ -23,7 +23,8 @@ Simple overview of use/purpose.
 ```
 
 run application
-```flaskr --app flaskr run ****```
+```flaskr --app flaskr run 
+```
 
 
 
