@@ -17,7 +17,15 @@
               {{ post['title'] }}
             </button>
             {% if g.user['id'] == post['author_id'] %}
-              <a class="action" href="{{ url_for('blog.update', id=post['id']) }}">Edit</a>
+              <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="{{ url_for('blog.update', id=post['id']) }}">Edit</a>
+                  <a class="dropdown-item" href="{{ url_for('blog.delete', id=post['id']) }}">Delete</a>
+                </div>
+              </div>
             {% endif %}
           </h2>
         </div>
